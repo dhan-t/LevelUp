@@ -1,0 +1,53 @@
+{
+  "users": {
+    "_id": "ObjectId",
+    "username": "String",
+    "email": "String",
+    "profile": {
+      "level": 1,
+      "currentXP": 150,
+      "nextLevelXP": 500,
+      "totalXP": 1250,
+      "rankTitle": "Novice Scrivener",
+      "avatarUrl": "String (URL to assets)",
+      "unlockedRewards": ["item_id_001", "theme_dark_gold"]
+    },
+    "stats": {
+      "questsCompleted": 42,
+      "achievementsUnlocked": 5,
+      "streakDays": 7
+    },
+    "createdAt": "ISODate",
+    "updatedAt": "ISODate"
+  },
+
+  "quests": {
+    "_id": "ObjectId",
+    "userId": "ObjectId (Reference to User)",
+    "title": "Daily Standup Prep",
+    "description": "Review yesterday's blockers and today's goals.",
+    "priority": "Low | Medium | High",
+    "frequency": "Daily | Weekly | One-Time",
+    "xpReward": 50,
+    "status": "Available | Completed | Overdue",
+    "lastCompletedAt": "ISODate (Used to reset dailies)",
+    "dueDate": "ISODate",
+    "tags": ["work", "productivity"]
+  },
+
+  "achievements": {
+    "_id": "ObjectId",
+    "userId": "ObjectId (Reference to User)",
+    "title": "The Centurion",
+    "description": "Complete 100 Quests total.",
+    "category": "Milestone | Social | Skill",
+    "xpReward": 1000,
+    "isUnlocked": false,
+    "progress": {
+      "currentValue": 42,
+      "targetValue": 100
+    },
+    "unlockedAt": "ISODate | null",
+    "visualRewardId": "badge_centurion_01"
+  }
+}
